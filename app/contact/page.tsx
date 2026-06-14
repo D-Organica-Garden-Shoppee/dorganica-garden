@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { BRAND, CONTACT, SOCIAL } from "@/lib/constants";
-import ContactForm from "@/components/ContactForm";
+import ContactCta from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 /**
  * Contact page — conversion-first design.
- * Split layout: Contact info (left) + Form (right).
+ * Split layout: Contact info (left) + WhatsApp/Email CTA cards (right).
  */
 export default function ContactPage() {
   return (
@@ -45,8 +45,8 @@ export default function ContactPage() {
                 Reach Out
               </h2>
               <p className="mt-4 leading-relaxed text-charcoal-600">
-                Fill in the form and we&apos;ll get back to you within 24 hours.
-                Or reach us directly through any of the channels below.
+                We&apos;re always happy to hear from you. Choose the channel
+                that works best for you.
               </p>
 
               {/* Contact details */}
@@ -156,17 +156,17 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right — Contact Form (3 cols) */}
+            {/* Right — Contact CTA (3 cols) */}
             <div className="lg:col-span-3">
               <div className="rounded-2xl border border-cream-200 bg-cream-50/50 p-6 sm:p-10">
                 <h3 className="text-xl font-bold text-forest-900">
-                  Send Us a Message
+                  Get in Touch
                 </h3>
                 <p className="mt-2 text-sm text-charcoal-500">
-                  Fill in the form and we&apos;ll respond within 24 hours.
+                  Choose your preferred way to connect with us.
                 </p>
                 <div className="mt-8">
-                  <ContactForm />
+                  <ContactCta />
                 </div>
               </div>
             </div>
